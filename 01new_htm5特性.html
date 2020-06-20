@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>header</header>
+    <h3>音频文件</h3>
+    <audio src="media/snow.mp3" controls="controls"></audio>
+    <!-- <h3>视频文件</h3>
+    <video src="media/video.mp4" controls="controls"></video> -->
+
+    <h3>兼容性书写</h3>
+    <!-- 谷歌浏览器把自动播放功能给禁用了， 解决方案： 给视频增加禁音属性 -->
+    <video autoplay="autoplay" muted="muted" loop="loop" poster="media/pic.jpg">
+        <source src="media/video.mp4" type="video/mp4">
+        <source src="media/video.ogg" type="video/ogg"> 
+        您的浏览器太低了，不支持播放
+    </video>
+
+</body>
+
+</html>
