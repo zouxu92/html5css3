@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* 增加透视效果 */
+            perspective: 500px;
+        }
+        
+        .box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            transition: all .6s;
+            /* 让背面的盒子，保持3d立体空间; */
+            transform-style: preserve-3d;
+        }
+        
+        .box:hover {
+            transform: rotateY(180deg);
+            animation-fill-mode: forwards;
+        }
+        
+        .front,
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+            line-height: 300px;
+        }
+        
+        .front {
+            background-color: chartreuse;
+            z-index: 1;
+        }
+        
+        .back {
+            background-color: cyan;
+            /* 将先进行翻转，放在上面一张图的后面 */
+            transform: rotateY(180deg);
+            animation-fill-mode: forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="front">嘿嘿嘿</div>
+        <div class="back">你懂得！！！！</div>
+    </div>
+</body>
+
+</html>
