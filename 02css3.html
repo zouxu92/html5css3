@@ -9,14 +9,21 @@
         button {
             cursor: pointer;
         }
+        /* 属性选择器使用方法 */
+        /* 选择的是：既有button 又有disabled的这个属性的元素 */
+        
+        button[disabled] {
+            cursor: default;
+        }
     </style>
 </head>
 
 <body>
     <button>按钮</button>
     <button>按钮</button>
-    <button>按钮</button>
-    <button>按钮</button>
+    <button disabled="disabled">按钮</button>
+    <button disabled="disabled">按钮</button>
+    <div>是</div>
 </body>
 
 </html>
